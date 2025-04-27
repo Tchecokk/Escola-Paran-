@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Paraná - Notas</title>
+</head>
+
+<body>
+    <header>
+        <h1>NOTAS</h1>
+    </header>
+    <nav>
+        <div>
+            <h2>Biologia</h2>
+            <form>
+                <label for="biologiaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="biologiaPrimeiroTri" name="biologiaTri" min="0" max="100" width="92" height="24">
+
+                <label for="biologiaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="biologiaSegundoTri" name="biologiaTri" min="0" max="100" width="92" height="24">
+
+                <label for="biologiaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="biologiaTercerioTri" name="biologiaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="biologia">Média</button>
+            </center>
+            <h3>Média é: <span id="biologiaValorMedio"></span></h3>
+            <h3>Resultado: <span id="biologiaArpr"></span></h3>
+        </div>
+        <div>
+            <h2>Educação Fisica</h2>
+            <form>
+                <label for="edFisicaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="edFisicaPrimeiroTri" name="edFisicaTri" min="0" max="100" width="92" height="24">
+
+                <label for="edFisicaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="edFisicaSegundoTri" name="edFisicaTri" min="0" max="100" width="92" height="24">
+
+                <label for="edFisicaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="edFisicaTercerioTri" name="edFisicaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="edFisica">Média</button>
+            </center>
+            <h3>Média é: <span id="edFisicaValorMedio"></span></h3>
+            <h3>Resultado: <span id="edFisicaArpr"></span></h3>
+        </div>
+        <div>
+            <h2>Filosofia</h2>
+            <form>
+                <label for="filosofiaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="filosofiaPrimeiroTri" name="filosofiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="filosofiaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="filosofiaSegundoTri" name="filosofiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="filosofiaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="filosofiaTercerioTri" name="filosofiaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="filosofia">Média</button>
+            </center>
+            <h3>Média é: <span id="filosofiaValorMedio"></span></h3>
+            <h3>Resultado: <span id="filosofiaArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Inglês</h2>
+            <form>
+                <label for="inglesPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="inglesPrimeiroTri" name="inglesTri" min="0" max="100" width="92" height="24">
+        
+                <label for="inglesSegundoTri">2 Trimestre:</label>
+                <input type="number" id="inglesSegundoTri" name="inglesTri" min="0" max="100" width="92" height="24">
+        
+                <label for="inglesTercerioTri">3 Trimestre:</label>
+                <input type="number" id="inglesTercerioTri" name="inglesTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="ingles">Média</button>
+            </center>
+            <h3>Média é: <span id="inglesValorMedio"></span></h3>
+            <h3>Resultado: <span id="inglesArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Geografia</h2>
+            <form>
+                <label for="geografiaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="geografiaPrimeiroTri" name="geografiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="geografiaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="geografiaSegundoTri" name="geografiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="geografiaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="geografiaTercerioTri" name="geografiaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="geografia">Média</button>
+            </center>
+            <h3>Média é: <span id="geografiaValorMedio"></span></h3>
+            <h3>Resultado: <span id="geografiaArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Física</h2>
+            <form>
+                <label for="fisicaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="fisicaPrimeiroTri" name="fisicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="fisicaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="fisicaSegundoTri" name="fisicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="fisicaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="fisicaTercerioTri" name="fisicaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="fisica">Média</button>
+            </center>
+            <h3>Média é: <span id="fisicaValorMedio"></span></h3>
+            <h3>Resultado: <span id="fisicaArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>História</h2>
+            <form>
+                <label for="historiaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="historiaPrimeiroTri" name="historiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="historiaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="historiaSegundoTri" name="historiaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="historiaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="historiaTercerioTri" name="historiaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="historia">Média</button>
+            </center>
+            <h3>Média é: <span id="historiaValorMedio"></span></h3>
+            <h3>Resultado: <span id="historiaArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Português</h2>
+            <form>
+                <label for="portuguesPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="portuguesPrimeiroTri" name="portuguesTri" min="0" max="100" width="92" height="24">
+        
+                <label for="portuguesSegundoTri">2 Trimestre:</label>
+                <input type="number" id="portuguesSegundoTri" name="portuguesTri" min="0" max="100" width="92" height="24">
+        
+                <label for="portuguesTercerioTri">3 Trimestre:</label>
+                <input type="number" id="portuguesTercerioTri" name="portuguesTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="portugues">Média</button>
+            </center>
+            <h3>Média é: <span id="portuguesValorMedio"></span></h3>
+            <h3>Resultado: <span id="portuguesArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Matemática</h2>
+            <form>
+                <label for="matematicaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="matematicaPrimeiroTri" name="matematicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="matematicaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="matematicaSegundoTri" name="matematicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="matematicaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="matematicaTercerioTri" name="matematicaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="matematica">Média</button>
+            </center>
+            <h3>Média é: <span id="matematicaValorMedio"></span></h3>
+            <h3>Resultado: <span id="matematicaArpr"></span></h3>
+        </div>
+        
+        <div>
+            <h2>Química</h2>
+            <form>
+                <label for="quimicaPrimeiroTri">1 Trimestre:</label>
+                <input type="number" id="quimicaPrimeiroTri" name="quimicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="quimicaSegundoTri">2 Trimestre:</label>
+                <input type="number" id="quimicaSegundoTri" name="quimicaTri" min="0" max="100" width="92" height="24">
+        
+                <label for="quimicaTercerioTri">3 Trimestre:</label>
+                <input type="number" id="quimicaTercerioTri" name="quimicaTri" min="0" max="100" width="92" height="24">
+            </form>
+            <center>
+                <button type="button" onclick="calcularMedia(this)" data-materia="quimica">Média</button>
+            </center>
+            <h3>Média é: <span id="quimicaValorMedio"></span></h3>
+            <h3>Resultado: <span id="quimicaArpr"></span></h3>
+        </div>
+        </nav>
+    <footer>
+        <a href="epr.html"><img src="home-146585_640.webp" alt="" width="56px" height="50px"></a>
+        <a href="p2.html"><img src="yt.png" alt="" width="56px" height="50px"></a>
+        <a href="p3.html"><img src="caderno.png" alt="" width="56px" height="50px"></a>
+    </footer>
+
+    <script>
+        function calcularMedia(botao) {
+            const materia = botao.dataset.materia;
+            const camposTrimestre = document.querySelectorAll(`input[type="number"][name="${materia}Tri"]`);
+            const valorMedioElement = document.getElementById(`${materia}ValorMedio`);
+            const arprElement = document.getElementById(`${materia}Arpr`);
+            let soma = 0;
+            let quantidade = camposTrimestre.length;
+            let valor;
+
+            if (quantidade === 0) {
+                valorMedioElement.textContent = "Sem valores para média.";
+                arprElement.textContent = "";
+                return;
+            }
+
+            camposTrimestre.forEach(campo => {
+                const trimestre = parseInt(campo.value);
+
+                if (!isNaN(trimestre)) {
+                    soma += trimestre;
+                } else {
+                    alert("Por favor, insira apenas números válidos nos campos dos trimestres de " + materia + ".");
+                    return;
+                }
+            });
+
+            const media = soma / quantidade;
+            valorMedioElement.textContent = media.toFixed(2);
+
+            if (media >= 60) {
+                valor = "Aprovado";
+            } else {
+                valor = "Reprovado";
+            }
+
+            arprElement.textContent = valor;
+        }
+    </script>
+</body>
+</script>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+        font-family: 'Lato' ,sans-serif;
+        background-color: #c8c8c8;
+    }
+
+    header {
+        position: sticky;
+        width: calc(100vw);
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        display: flex; 
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#24478F, #376AB3, #2AB3E1);
+        color: white;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: calc(100vw);
+        justify-content: space-around;
+        display: flex;
+        text-align: center;
+        color: white;
+        align-items: center;
+        background: linear-gradient(#2AB3E1, #376AB3, #24478F);
+        height: 70px;
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: -8px;
+    }
+
+    footer a:hover {
+        transition: 600ms;
+        filter: invert(100%)
+    }
+
+    nav {
+        gap: 50px;
+        color: #acacac;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    div {
+        visibility: hidden;
+        width: 470px;
+        height: 40px;
+    }
+
+    div h2{
+        color: white;
+        visibility: visible;
+        position: sticky;
+        margin-top: -4px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #06063f;
+    }
+
+    div:hover {
+        visibility: visible;
+        border-radius: 8px;
+        transition: 1s;
+        background-color: white;
+        height: 180px;
+        color: black;
+    }
+
+    div:hover h3{
+        color: black;
+        align-items: baseline;
+        opacity: 1;
+    }
+
+
+</style>

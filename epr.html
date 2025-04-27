@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Paraná - P1</title>
+</head>
+<body>
+    <header>
+        <img src="er.png" alt="er" width="170px" class="direita">
+        <h1>Bem vindo, Professor Luiz!</h1>
+    </header>
+    <br>
+<nav id="p">
+    <nav class="i">
+        <h2>ㅤㅤㅤFrequência</h2>
+        <div class="frequencia">
+            <div class="prese">
+                <h2>239</h2>
+                <h3>Presenças</h3>
+            </div>
+            <div class="falta">
+                <h2>1</h2>
+                <h3>Faltas</h3>
+            </div>
+            <div class="aulas">
+                <h2>240</h2>
+                <h3>Aulas</h3>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="t">
+        <div class="hj">
+            <h2>Aulas de Hoje</h2>
+            <h2 id="data-atual"></h2>
+        </div>
+        <script>
+            const dataAtual = new Date();
+            const dia = dataAtual.getDate();
+            const mes = dataAtual.getMonth() + 1; 
+            const ano = dataAtual.getFullYear();
+            const elementoData = document.getElementById("data-atual");
+            elementoData.textContent = `${dia}/${mes}/${ano}`;
+        </script>
+        <div class="geo">
+            <h3>ㅤㅤ07:20 a 10:00</h3>
+            <hr>
+            <h2>Geografiaㅤㅤ</h2>
+            <h4>Niveㅤㅤ</h4>
+        </div>
+        </div>
+            <div class="hist">
+            <h3>ㅤㅤ10:00 a 10:50</h3>
+            <hr>
+            <h2>Históriaㅤㅤ</h2>
+            <h4>Império Romanoㅤㅤ</h4>
+        </div>
+        <div class="eng">
+            <h3>ㅤㅤ10:50 a 11:40</h3>
+            <hr>
+            <h2>Inglêsㅤㅤ</h2>
+            <h4>Recuperaçãoㅤㅤ</h4>
+        </div>
+        <div class="mat">
+            <h3>ㅤㅤ11:40 a 12:30</h3>
+            <hr>
+            <h2>Matemáticaㅤㅤ</h2>
+            <h4>Khan Academyㅤㅤ</h4>
+        </div>
+    </nav>
+</nav>
+    <footer>
+        <a href="epr.html"><img src="home-146585_640.webp" alt="" width="56px" height="50px"></a>
+        <a href="p2.html"><img src="yt.png" alt="" width="56px" height="50px"></a>
+        <a href="p3.html"><img src="caderno.png" alt="" width="56px" height="50px"></a>
+    </footer>
+    
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: 'Lato' ,sans-serif;
+        background-color: #c8c8c8;
+    }
+
+
+    .direita {
+    position: absolute;
+    right: 0;
+    }
+    
+    header {
+        position: sticky;
+        width: calc(100vw);
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        display: flex; 
+        height: 170px;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#24478F, #376AB3, #2AB3E1);
+        color: white;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: calc(100vw);
+        justify-content: space-around;
+        display: flex;
+        text-align: center;
+        color: white;
+        align-items: center;
+        background: linear-gradient(#2AB3E1, #376AB3, #24478F);
+        height: 70px;
+        margin-top: -8px;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: -8px;
+    }
+
+    footer a:hover {
+        transition: 600ms;
+        filter: invert(100%)
+    }
+
+    nav.i {
+        border-radius: 30px;
+        background-color: white;
+        color: #0c0c20;
+        width: 600px;
+        height: 200px;
+    }
+
+    .frequencia {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        font-family: 'Roboto' ,sans-serif;
+        font-style: 'Thin 100';
+    }
+
+    .prese h2{
+        color: chartreuse;
+    }
+
+    .falta h2 {
+        color: red;
+    }
+
+    nav h3 {
+        color: #4f4fc2;
+    }
+
+    nav.t {
+        text-align: center;
+        width: 600px;
+        border-radius: 30px;
+        background-color: white ;
+    }
+
+    .geo {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+    }
+    .eng {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+    }
+    .hist {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+    }
+    .mat {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+    }
+
+    .hj {
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav#p {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
